@@ -4,11 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centros Educativos</title>
-    <meta name="description" content="Programas de formación profesional de madera, mueble y corcho en las Islas Canarias">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <meta
+      name="description"
+      content="Programas de formación profesional de madera, mueble y corcho en las Islas Canarias"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <meta
       name="description"
       content="Programas de formación profesional de madera, mueble y corcho en las Islas Canarias"
@@ -106,7 +129,7 @@
               <div class="flex justify-center items-center h-32">
                 <div class="text-center">
                   <img
-                    src="https://www3.gobiernodecanarias.org/medusa/edublog/cifptonygallardo/wp-content/uploads/sites/94/2022/11/logo-CIFPTG.png"
+                    src="../img/tonygallardo.jpg"
                     alt="Logo CIFP Tony Gallardo"
                     class="h-28 mx-auto bg-white rounded-full p-2"
                   />
@@ -146,8 +169,8 @@
                 </ul>
               </div>
               <a
-                href="#"
-                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2"
+                href="https://www.gobiernodecanarias.org/educacion/web/centros/centros_educativos/buscador-centros/resultados/detalle?codigo=35015887"
+                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2" target="_blank"
                 >Ver detalles</a
               >
             </div>
@@ -161,7 +184,7 @@
               <div class="flex justify-center items-center h-32">
                 <div class="text-center">
                   <img
-                    src="https://www3.gobiernodecanarias.org/medusa/eduweb/webs/iesanaluisabenitez/web/templates/jb_education_pro/images/logo3.png"
+                    src="../img/analuisa.jpg"
                     alt="Logo IES Ana Luisa Benítez"
                     class="h-28 mx-auto bg-white rounded-full p-2"
                   />
@@ -185,7 +208,7 @@
                 <div class="flex items-center">
                   <i class="fas fa-globe text-green-600 mr-2"></i>
                   <a
-                    href="https://www3.gobiernodecanarias.org/medusa/eduweb/webs/iesanaluisabenitez/web/"
+                    href="https://www3.gobiernodecanarias.org/medusa/edublog/iesanaluisabenitez/"
                     target="_blank"
                     class="text-sm text-blue-600 hover:underline"
                     >Web oficial</a
@@ -200,8 +223,8 @@
                 </ul>
               </div>
               <a
-                href="#"
-                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2"
+                href="https://www.gobiernodecanarias.org/educacion/web/centros/centros_educativos/buscador-centros/resultados/detalle?codigo=35007842"
+                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2" target="_blank"
                 >Ver detalles</a
               >
             </div>
@@ -254,8 +277,8 @@
                 </ul>
               </div>
               <a
-                href="#"
-                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2"
+                href="https://www.gobiernodecanarias.org/educacion/web/centros/centros_educativos/buscador-centros/resultados/detalle?codigo=35014664"
+                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2" target="_blank"
                 >Ver detalles</a
               >
             </div>
@@ -363,8 +386,8 @@
                 </ul>
               </div>
               <a
-                href="#"
-                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2"
+                href="https://www.gobiernodecanarias.org/educacion/web/centros/centros_educativos/buscador-centros/resultados/detalle?codigo=38010414"
+                class="btn-primary inline-block px-4 py-2 rounded text-sm font-medium mt-2" target="_blank"gtty
                 >Ver detalles</a
               >
             </div>
@@ -544,83 +567,9 @@
           canario. Haz clic en los marcadores para obtener más información.
         </p>
 
-        <div id="map-container" class="max-w-4xl mx-auto relative">
-          <img
-            src="https://www.gobiernodecanarias.org/cmsgobcan/export/sites/educacion/web/.content/images/temas_de_interes/banner_mapa_de_canarias.jpg"
-            alt="Mapa de las Islas Canarias"
-            class="w-full rounded-lg shadow-lg"
-          />
-
-          <!-- Markers for each educational center -->
-          <div
-            class="marker"
-            style="top: 32%; left: 82%"
-            onclick="scrollToCenter('tony-gallardo')"
-          >
-            <div class="marker-tooltip">CIFP Tony Gallardo - Gran Canaria</div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 40%; left: 79%"
-            onclick="scrollToCenter('ana-luisa')"
-          >
-            <div class="marker-tooltip">
-              IES Ana Luisa Benítez - Gran Canaria
-            </div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 45%; left: 82%"
-            onclick="scrollToCenter('fernando-sagaseta')"
-          >
-            <div class="marker-tooltip">
-              IES Fernando Sagaseta - Gran Canaria
-            </div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 55%; left: 78%"
-            onclick="scrollToCenter('villa-aguimes')"
-          >
-            <div class="marker-tooltip">
-              CIFP Villa de Agüimes - Gran Canaria
-            </div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 38%; left: 37%"
-            onclick="scrollToCenter('geneto')"
-          >
-            <div class="marker-tooltip">IES Geneto - Tenerife</div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 27%; left: 30%"
-            onclick="scrollToCenter('la-orotava')"
-          >
-            <div class="marker-tooltip">IES La Orotava - Tenerife</div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 42%; left: 34%"
-            onclick="scrollToCenter('mencey-acaymo')"
-          >
-            <div class="marker-tooltip">IES Mencey Acaymo - Tenerife</div>
-          </div>
-
-          <div
-            class="marker"
-            style="top: 50%; left: 15%"
-            onclick="scrollToCenter('las-brenas')"
-          >
-            <div class="marker-tooltip">IES Las Breñas - La Palma</div>
-          </div>
+        <!-- Mapa interactivo con leaflet.js -->
+        <div class="map-container">
+          <div id="map"></div>
         </div>
 
         <div
@@ -681,80 +630,226 @@
 
     <footer class="wood-bg py-12">
       <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-              <div>
-                  <h3 class="text-xl font-bold mb-4 text-white">FP Madera y Mueble</h3>
-                  <p class="text-gray-200 mb-4">Formación profesional de calidad en el sector de la madera, el mueble y el corcho en las Islas Canarias.</p>
-                  <div class="flex space-x-4">
-                      <a href="#" class="text-white hover:text-gray-300 transition">
-                          <i class="fab fa-facebook-f"></i>
-                      </a>
-                      <a href="#" class="text-white hover:text-gray-300 transition">
-                          <i class="fab fa-twitter"></i>
-                      </a>
-                      <a href="#" class="text-white hover:text-gray-300 transition">
-                          <i class="fab fa-instagram"></i>
-                      </a>
-                      <a href="#" class="text-white hover:text-gray-300 transition">
-                          <i class="fab fa-youtube"></i>
-                      </a>
-                  </div>
-              </div>
-              
-              <div>
-                  <h3 class="text-xl font-bold mb-4 text-white">Enlaces rápidos</h3>
-                  <ul class="space-y-2">
-                      <li><a href="index" class="text-gray-200 hover:text-white transition">Inicio</a></li>
-                      <li><a href="#mapa" class="text-gray-200 hover:text-white transition">Mapa de Centros</a></li>
-                      <li><a href="#centros" class="text-gray-200 hover:text-white transition">Centros Educativos</a></li>
-                      <li><a href="#programas" class="text-gray-200 hover:text-white transition">Programas Formativos</a></li>
-                      <li><a href="#empresas" class="text-gray-200 hover:text-white transition">Colaboración Empresarial</a></li>
-                      <li><a href="#innovacion" class="text-gray-200 hover:text-white transition">Innovación</a></li>
-                  </ul>
-              </div>
-              
-              <div>
-                  <h3 class="text-xl font-bold mb-4 text-white">Centros educativos</h3>
-                  <ul class="space-y-2">
-                      <li><a href="#tony-gallardo" class="text-gray-200 hover:text-white transition">CIFP Tony Gallardo</a></li>
-                      <li><a href="#ana-luisa" class="text-gray-200 hover:text-white transition">IES Ana Luisa Benítez</a></li>
-                      <li><a href="#fernando-sagaseta" class="text-gray-200 hover:text-white transition">IES Fernando Sagaseta</a></li>
-                      <li><a href="#villa-aguimes" class="text-gray-200 hover:text-white transition">CIFP Villa de Agüimes</a></li>
-                      <li><a href="#geneto" class="text-gray-200 hover:text-white transition">IES Geneto</a></li>
-                      <li><a href="#la-orotava" class="text-gray-200 hover:text-white transition">IES La Orotava</a></li>
-                      <li><a href="#mencey-acaymo" class="text-gray-200 hover:text-white transition">IES Mencey Acaymo</a></li>
-                      <li><a href="#las-brenas" class="text-gray-200 hover:text-white transition">IES Las Breñas</a></li>
-                  </ul>
-              </div>
-              
-              <div>
-                  <h3 class="text-xl font-bold mb-4 text-white">Contacto</h3>
-                  <ul class="space-y-2">
-                      <li class="flex items-start">
-                          <i class="fas fa-envelope text-gray-300 mt-1 mr-2"></i>
-                          <a href="mailto:fp.maderaymueble@gobiernodecanarias.org" class="text-gray-200 hover:text-white transition">fp.maderaymueble@gobiernodecanarias.org</a>
-                      </li>
-                      <li class="flex items-start">
-                          <i class="fas fa-phone text-gray-300 mt-1 mr-2"></i>
-                          <span class="text-gray-200">928 455 600 (ext. 2143)</span>
-                      </li>
-                      <li class="flex items-start">
-                          <i class="fas fa-map-marker-alt text-gray-300 mt-1 mr-2"></i>
-                          <span class="text-gray-200">Avda. Buenos Aires, 5<br>Edificio Tres de Mayo<br>38071 Santa Cruz de Tenerife</span>
-                      </li>
-                  </ul>
-              </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-white">
+              FP Madera y Mueble
+            </h3>
+            <p class="text-gray-200 mb-4">
+              Formación profesional de calidad en el sector de la madera, el
+              mueble y el corcho en las Islas Canarias.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-gray-300 transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-white hover:text-gray-300 transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-white hover:text-gray-300 transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-white hover:text-gray-300 transition">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
           </div>
-          
-          <div class="border-t border-amber-800 pt-8 text-center">
-              <p class="text-gray-200">© 2025 Formación Profesional Madera, Mueble y Corcho - Islas Canarias. Todos los derechos reservados.</p>
-              <div class="mt-4 space-x-4">
-                  <a href="#" class="text-gray-200 hover:text-white transition">Aviso legal</a>
-                  <a href="#" class="text-gray-200 hover:text-white transition">Política de privacidad</a>
-                  <a href="#" class="text-gray-200 hover:text-white transition">Política de cookies</a>
-              </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-white">Enlaces rápidos</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index"
+                  class="text-gray-200 hover:text-white transition"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#mapa"
+                  class="text-gray-200 hover:text-white transition"
+                  >Mapa de Centros</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#centros"
+                  class="text-gray-200 hover:text-white transition"
+                  >Centros Educativos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#programas"
+                  class="text-gray-200 hover:text-white transition"
+                  >Programas Formativos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#empresas"
+                  class="text-gray-200 hover:text-white transition"
+                  >Colaboración Empresarial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#innovacion"
+                  class="text-gray-200 hover:text-white transition"
+                  >Innovación</a
+                >
+              </li>
+            </ul>
           </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-white">
+              Centros educativos
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#tony-gallardo"
+                  class="text-gray-200 hover:text-white transition"
+                  >CIFP Tony Gallardo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#ana-luisa"
+                  class="text-gray-200 hover:text-white transition"
+                  >IES Ana Luisa Benítez</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#fernando-sagaseta"
+                  class="text-gray-200 hover:text-white transition"
+                  >IES Fernando Sagaseta</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#villa-aguimes"
+                  class="text-gray-200 hover:text-white transition"
+                  >CIFP Villa de Agüimes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#geneto"
+                  class="text-gray-200 hover:text-white transition"
+                  >IES Geneto</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#la-orotava"
+                  class="text-gray-200 hover:text-white transition"
+                  >IES La Orotava</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#mencey-acaymo"
+                  class="text-gray-200 hover:text-white transition"
+                  >IES Mencey Acaymo</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#las-brenas"
+                  class="text-gray-200 hover:text-white transition"
+                  >IES Las Breñas</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-white">Contacto</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-gray-300 mt-1 mr-2"></i>
+                <a
+                  href="mailto:fp.maderaymueble@gobiernodecanarias.org"
+                  class="text-gray-200 hover:text-white transition"
+                  >fp.maderaymueble@gobiernodecanarias.org</a
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone text-gray-300 mt-1 mr-2"></i>
+                <span class="text-gray-200">928 455 600 (ext. 2143)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-gray-300 mt-1 mr-2"></i>
+                <span class="text-gray-200"
+                  >Avda. Buenos Aires, 5<br />Edificio Tres de Mayo<br />38071
+                  Santa Cruz de Tenerife</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-amber-800 pt-8 text-center">
+          <p class="text-gray-200">
+            © 2025 Formación Profesional Madera, Mueble y Corcho - Islas
+            Canarias. Todos los derechos reservados.
+          </p>
+          <div class="mt-4 space-x-4">
+            <a href="#" class="text-gray-200 hover:text-white transition"
+              >Aviso legal</a
+            >
+            <a href="#" class="text-gray-200 hover:text-white transition"
+              >Política de privacidad</a
+            >
+            <a href="#" class="text-gray-200 hover:text-white transition"
+              >Política de cookies</a
+            >
+          </div>
+        </div>
       </div>
-      </footer>
+    </footer>
+
+    <script>
+      var map = L.map("map").setView(
+        [28.034136076294008, -16.07636244371232],
+        7
+      );
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+
+      // IES Tony Gallardo
+      var marker = L.marker([28.15548505715901, -15.430132209953271]).addTo(map);
+      marker.bindPopup("<b>CIFP Tony Gallardo</b><br>Ctra. de las Coloradas, 35009 Las Palmas de Gran Canaria, Las Palmas")
+      // IES Ana Luisa Benitez
+      var marker = L.marker([28.097712906410802, -15.439277726515536]).addTo(map);
+      marker.bindPopup("<b>IES Ana Luisa Benítez</b><br>C. Ana Luisa Benítez, 15, 35014, Las Palmas de Gran Canaria, Las Palmas")
+      // IES Fernando Sagaseta
+      var marker = L.marker([28.028767824252395, -15.41048843075212]).addTo(map);
+      marker.bindPopup("<b>IES Fernnado Sagaseta</b><br>C. Manuel Alemán Álamo, 1, 35220 Valle de Jinamar, Las Palmas")
+      // CIFP Villa de Agüimes
+      var marker = L.marker([27.871040574524393, -15.4241770111775]).addTo(map);
+      marker.bindPopup("<b>CIFP Villa de Agüimes</b><br>Polígono Residencial de Arinaga, C. Alcorac, 50, 35118 Agüimes, Las Palmas")
+      // IES Geneto
+      var marker = L.marker([28.488256741638033, -16.314352125711757]).addTo(map);
+      marker.bindPopup("<b>IES Geneto</b><br>C. Domingo González Pérez, 11, 38296 La Laguna, Santa Cruz de Tenerife")
+      // IES La Orotava-Manuel González Pérez
+      var marker = L.marker([28.380771275719752, -16.533898771219942]).addTo(map);
+      marker.bindPopup("<b>IES La Orotava-Manuel González Pérez</b><br>Lugar Barranco San Antonio, s/n, 38300 La Orotava, Santa Cruz de Tenerife")
+      // IES Mencey Acaymo
+      var marker = L.marker([28.31825118375265, -16.40551272889333]).addTo(map);
+      marker.bindPopup("<b>IES Mencey Acaymo</b><br>C. Juan Álvarez Delgado, 38500 Güímar, Santa Cruz de Tenerife")
+      // IES Las Breñas
+      var marker = L.marker([28.644363833264336, -17.771382513009534]).addTo(map);
+      marker.bindPopup("<b>IES Las Breñas</b><br>C. San José, 212, 38712 Breña Baja, Santa Cruz de Tenerife")
+
+    </script>
   </body>
 </html>
